@@ -3,18 +3,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="imagenes/Icono/the-forest.icon.png" />
+  <link rel="shortcut icon" href="proyectoweb/aplicacionweb/static/img/Icono/the-forest.icon.png" /> <!--icono de la pagina, falta-->
   <title>menu principal-The forest Wiki</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link type="text/css" rel="stylesheet" href="css/estilo.css">
+  <link type="text/css" rel="stylesheet" href="{% static '/css/estilo.css' %}">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="{% static '/css/estilo.css' %}"> 
 </head>
 
 
@@ -30,7 +31,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'Principal' %}">Inicio</a> <!--El nombre DEBE ir en mayuscula si se llama así en urls, es key sensitivity-->
+                <a class="nav-link" href="{% url 'Principal' %}">Inicio</a> 
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'forowiki' %}">Foro</a>
@@ -85,56 +86,56 @@
           <div class="contenedor-carousel">
             <div class="carousel">
               <div class="pelicula">
-                <a href="{% url 'animales' %}"><img src="" alt="{% static '/imagenes/img_wiki/animal2.png' %}">
+                <a href="{% url 'animales' %}"><img src="{% static '/img/img_wiki/animal2.png' %}" alt="">
                 <center>
                   <p style="color: white;">Animales</p>
                 </center>
               </div>
 
               <div class="pelicula">
-                <a href="{% url 'lugares' %}"><img src="img_wiki/mapaforest1.png" alt=""></a>
+                <a href="{% url 'lugares' %}"><img src="{% static '/img/img_wiki/mapaforest1.png' %}" alt=""></a>
                 <center>
                   <p style="color: white;">Mapa</p>
                 </center>
               </div>
 
               <div class="pelicula">
-                <a href="{% url 'enemigos' %}"><img src="img_wiki/enemigosforest1.png" alt=""></a>
+                <a href="{% url 'enemigos' %}"><img src="{% static '/img/img_wiki/enemigosforest1.png' %}" alt=""></a>
                 <center>
                   <p style="color: white;">Enemigos</p>
                 </center>
               </div>
 
               <div class="pelicula">
-                <a href="{% url 'construcciones' %}"><img src="img_wiki/buildings.png" alt=""></a>
+                <a href="{% url 'construcciones' %}"><img src="{% static '/img/img_wiki/buildings.png' %}" alt=""></a>
                 <center>
                   <p style="color: white;">Construcciones</p>
                 </center>
               </div>
 
               <div class="pelicula">
-                <a href="{% url 'flora' %}"><img src="img_wiki/plantaforest.png" alt=""></a>
+                <a href="{% url 'flora' %}"><img src="{% static '/img/img_wiki/plantaforest.png' %}" alt=""></a>
                 <center>
                   <p style="color: white;">Plantas</p>
                 </center>
               </div>
 
               <div class="pelicula">
-                <a href="{% url 'armas' %}"><img src="img_wiki/armasthf1.png" alt=""></a>
+                <a href="{% url 'armas' %}"><img src="{% static '/img/img_wiki/armasthf1.png' %}" alt=""></a>
                 <center>
                   <p style="color: white;">Armas</p>
                 </center>
               </div>
 
               <div class="pelicula">
-                <a href="{% url 'consumibles' %}"><img src="img_wiki/consumibles.png" alt=""></a>
+                <a href="{% url 'consumibles' %}"><img src="{% static '/img/img_wiki/consumibles.png' %}" alt=""></a>
                 <center>
                   <p style="color: white;">Consumibles</p>
                 </center>
               </div>
 
               <div class="pelicula">
-                <a href="{% url 'historia' %}"><img src="img_wiki/Storytf.png" alt=""></a>
+                <a href="{% url 'historia' %}"><img src="{% static '/img/img_wiki/storytf.png' %}" alt=""></a>
                 <center>
                   <p style="color: white;">Historia</p>
                 </center>
@@ -161,7 +162,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 
   </main>
 
@@ -233,7 +234,10 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+crossorigin="anonymous"></script>
 </body>
 
 </html>

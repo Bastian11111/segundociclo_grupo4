@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
     rel="stylesheet">
     <script src="https://kit.fontawesome.com/ffec4ec2ed.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="csslogin/login.css" />
+    <link rel="stylesheet" href="{% static '../css/csslogin/login.css' %}" />
 
     <title>Iniciar sesion-The forest Wiki</title>
   </head>
@@ -101,7 +102,7 @@
 
                 </div>
                 <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 mt-auto w-100">
-                    <p class="d-inline-block mb-0">¿Todavia no tienes una cuenta?</p> <a href="registrase_wiki.html" class="text-light font-weight-bold text-decoration-none">Registrate Aquí</a>
+                    <p class="d-inline-block mb-0">¿Todavia no tienes una cuenta?</p> <a href="{% url 'registrarse' %}" class="text-light font-weight-bold text-decoration-none">Registrate Aquí</a>
                 </div>
             </div>
         </div>
