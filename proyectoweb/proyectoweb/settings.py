@@ -141,3 +141,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'aplicacionweb/static' ), ] #Aqui se 
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#PARA LAS IMAGENES: Le decimos a Django
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #Aqui se le dice a django donde buscar los archivos multimedia, va a crear una lista
