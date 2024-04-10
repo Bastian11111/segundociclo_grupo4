@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from .models import Usuario
+
+
+
 
 # Create your views here.
 def principal(request):
@@ -46,6 +50,17 @@ def armas(request):
 def animales(request):
     return render(request, 'aplicacionweb/animales.html')
 
+def panelAdmin(request):
+    return render(request, 'aplicacionweb/panelAdmin.html')
 
+def lista_usuarios(request):
+    usuarios = Usuario.objects.all() #Esto es un select * from Usuario
+    
+    #Esto crea un contexto para pasarselo a la vista haciendo un diccionario 
+    context = {
+        'usuarios': usuarios
+    }
+    
+    return render(request, 'aplicacionweb/PanelAdmin.html', context) #El render lo que hace es renderizar la vista, el request es lo que se le envia a la vista, y el nombre de la vista que se va a renderizar
 
 

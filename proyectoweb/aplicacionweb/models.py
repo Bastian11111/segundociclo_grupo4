@@ -30,7 +30,7 @@ from pyexpat import model
 class Usuario(models.Model):
     emailUsuario = models.CharField(max_length=200, primary_key=True, verbose_name='Email')
     nombreUsuario = models.CharField(max_length=50, verbose_name='Nombre', unique=True)
-    contraseñaUsuario = models.CharField(max_length=50, verbose_name='Contraseña')
+    contrasenaUsuario = models.CharField(max_length=50, verbose_name='Contraseña')
     avatarUsuario = models.ImageField(upload_to='usuarios', null=True, blank=True)
     
     # Cada vez que llamamos a categoria retornamos el nombre de la categoria

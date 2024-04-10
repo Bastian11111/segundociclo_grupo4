@@ -16,6 +16,9 @@ from .views import consumibles
 from .views import construcciones
 from .views import armas
 from .views import animales
+#CRUD: Importamos la vista de administracion
+from .views import panelAdmin
+
 
 #LLAMA A LAS VISTAS UNA POR UNA, SON LAS URL DE LA PAGINA
 urlpatterns = [
@@ -35,7 +38,7 @@ urlpatterns = [
     path('armas/', armas, name='armas'),
     path('animales/', animales, name='animales'),
     
-    #path('PanelAdmin/', administracion, name='PanelAdmin'),
-    
+    #CRUD: Creamos el url para el CRUD de la administracion
+    path('PanelAdmin/', panelAdmin, name='PanelAdmin'),
     
 ]
