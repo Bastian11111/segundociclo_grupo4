@@ -75,13 +75,30 @@ WSGI_APPLICATION = 'proyectoweb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
+#DATABASE POR DEFECTO PARA CONECTAR DESDE SQLITE
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": "mydatabase",
+#     }
+# }
+
+#DATABASE NUEVA PARA CONECTAR DESDE ORACLE
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": 'django.db.backends.oracle',
+        "NAME": '127.0.0.1:1521/orcl',
+        "USER": 'c##prueba',
+        "PASSWORD": 'prueba',
+        "TEST": {
+            "USER": 'default_test',
+            "TBLSPACE": 'default_test_tbls',
+            "TBLSPACE_TMP": 'default_test_tbls_tmp',
+        }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -124,3 +141,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'aplicacionweb/static' ), ] #Aqui se 
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#PARA LAS IMAGENES: Le decimos a Django
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #Aqui se le dice a django donde buscar los archivos multimedia, va a crear una lista

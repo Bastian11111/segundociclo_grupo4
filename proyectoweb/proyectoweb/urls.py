@@ -1,3 +1,5 @@
+
+
 """
 URL configuration for proyectoweb project.
 
@@ -16,8 +18,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings #Añadimos esta línea para poder importar la función static
+from django.conf.urls.static import static #Añadimos esta línea para poder importar la función static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('aplicacionweb.urls')), 
-]
+     
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #Añadimos esta línea para que Django pueda servir archivos multimedia en desarrollo
+
+
