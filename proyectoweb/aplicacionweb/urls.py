@@ -17,7 +17,7 @@ from .views import construcciones
 from .views import armas
 from .views import animales
 
-#LLAMA A LAS VISTAS UNA POR UNA (EN ESTE CASO LA PRIMERA))
+#LLAMA A LAS VISTAS UNA POR UNA, SON LAS URL DE LA PAGINA
 urlpatterns = [
     path('', principal, name='Principal'), #La primera vista que se llama es home, lo vacio dice que es la vista principal, home es la vista que se llama y el otro home es un alias 
     path('recuperarcontra/', recuperarcontra, name='rcontra'),
@@ -34,6 +34,8 @@ urlpatterns = [
     path('construcciones/', construcciones, name='construcciones'),
     path('armas/', armas, name='armas'),
     path('animales/', animales, name='animales'),
+    
+    #path('PanelAdmin/', administracion, name='PanelAdmin'),
     
     
 ]

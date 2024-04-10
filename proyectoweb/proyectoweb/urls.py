@@ -24,8 +24,7 @@ from django.conf.urls.static import static #Añadimos esta línea para poder imp
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('aplicacionweb.urls')), 
-    
-    
+     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #Añadimos esta línea para que Django pueda servir archivos multimedia en desarrollo
 
 
